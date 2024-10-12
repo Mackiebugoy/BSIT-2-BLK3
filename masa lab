@@ -1,36 +1,77 @@
-import 'package:flutter/material.dart';
-
-
-class labExam extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: LabExamHome(),
-    );
-  }
-}
-
 class LabExamHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80.0, // Optional: change the height if needed
-        backgroundColor: Colors.lightBlue, // Set the AppBar background color
+        backgroundColor: Colors.black, // Set the AppBar background color
         flexibleSpace: Center(
           child: Text(
-            'Lab Examination',
+            'Lab Exam midterm',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
-              color: Colors.white, // Use white color for better contrast
+              color: Colors.white,
+              fontFamily: 'Arial', // Use white color for better contrast
             ),
           ),
         ),
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.black,
+              ),
+              child: Text(
+                'Menu',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text('Profile'),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                // Add navigation to Profile screen if needed
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                // Add navigation to Settings screen if needed
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.notifications),
+              title: Text('Notifications'),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                // Add navigation to Notifications screen if needed
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.logout),
+              title: Text('Logout'),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                // Handle logout functionality
+              },
+            ),
+          ],
+        ),
+      ),
+      backgroundColor: Colors.grey, // Set the body background color
       body: Center(
         child: Card(
-          color: Colors.tealAccent,
+          color: Colors.black54, // Card background color
           child: Padding(
             padding: const EdgeInsets.all(16.0), // Padding around the content
             child: Column(
@@ -39,12 +80,18 @@ class LabExamHome extends StatelessWidget {
                 CircleAvatar(
                   radius: 50,
                   backgroundImage: NetworkImage(
-                    'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
-                  ), // Load your network image here
+                    'https://lh4.googleusercontent.com/proxy/KsyghAWAa19GLnnq5WTfHj_PEgqDcfLnQrW9QcQ45LcAx24BKKcb6n9TzXByw354RqLWEteNj7J20t8o24TYuRzw9Ilne6qu1WlORcTqbPjckAJ83SM7KsF1tbzIrNI2KCHwXcui4ZdJAQsTo48r9Eyy',
+                  ),
                 ),
                 SizedBox(height: 20), // Space between the image and text
-                Text('Mac Lovell Keith D. Ates'),
-                Text('Bachelor of Science in Information Technology') ,
+                Text(
+                  'Ates Mac Lovell Keith D.',
+                  style: TextStyle(color: Colors.white), // Text color for the name
+                ),
+                Text(
+                  'Bachelor of Science in Information Technology',
+                  style: TextStyle(color: Colors.white), // Text color for the degree
+                ),
                 SizedBox(height: 20), // Space between the text and buttons
                 Wrap(
                   spacing: 8.0, // Space between buttons
@@ -52,16 +99,22 @@ class LabExamHome extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        // Add your button action here
-                        print('Add me');
+                        // Handle add button press
                       },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black, // Button background color
+                        foregroundColor: Colors.white, // Text color for button
+                      ),
                       child: Text('Add'), // Text for the first button
                     ),
                     ElevatedButton(
                       onPressed: () {
-                        // Add your button action here
-                        print('Follow me');
+                        // Handle follow button press
                       },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black, // Button background color
+                        foregroundColor: Colors.white, // Text color for button
+                      ),
                       child: Text('Follow'), // Text for the second button
                     ),
                   ],
