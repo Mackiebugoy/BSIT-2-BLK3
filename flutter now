@@ -1,34 +1,76 @@
-import 'package:flutter/material.dart';
-
-class LoginScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginScreenHome(),
-    );
-  }
-}
-
 class LoginScreenHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login Page"),
+        title: Text(
+          "Login Page",
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Italic',
+            fontWeight: FontWeight.bold,
+            fontSize: 25,
+          ),
+        ),
+        backgroundColor: Colors.black,
+      ),
+      // Add the Drawer here
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.black,
+              ),
+              child: Text(
+                'Navigation Menu',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+              onTap: () {
+                // Handle home navigation
+                Navigator.pop(context); // Close the drawer
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+              onTap: () {
+                // Handle settings navigation
+                Navigator.pop(context); // Close the drawer
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.help),
+              title: Text('Help'),
+              onTap: () {
+                // Handle help navigation
+                Navigator.pop(context); // Close the drawer
+              },
+            ),
+          ],
+        ),
       ),
       body: Column(
         children: [
-          Text('Welocome users'),
+          Text('Welcome users', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
           SizedBox(height: 20),
-          Text('Please Login to Continue' ,style: TextStyle(color: Colors.blue)),
+          Text('Please Login to Continue', style: TextStyle(color: Colors.black)),
           SizedBox(height: 20),
           SizedBox(
-            height: MediaQuery.of(context).size.height*0.65,
-            width: MediaQuery.of(context).size.width*0.9,
+            height: MediaQuery.of(context).size.height * 0.65,
+            width: MediaQuery.of(context).size.width * 0.3,
             child: Card(
               elevation: 20,
-              child:Padding(
+              child: Padding(
                 padding: const EdgeInsets.all(9.0),
                 child: Column(
                   children: [
@@ -46,7 +88,7 @@ class LoginScreenHome extends StatelessWidget {
                         radius: 50,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 10),
                     TextField(
                       decoration: InputDecoration(
                         labelText: 'Username',
@@ -54,7 +96,7 @@ class LoginScreenHome extends StatelessWidget {
                         border: OutlineInputBorder(),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 10),
                     TextField(
                       decoration: InputDecoration(
                         labelText: 'Password',
@@ -62,14 +104,24 @@ class LoginScreenHome extends StatelessWidget {
                         border: OutlineInputBorder(),
                       ),
                     ),
-                    SizedBox(height: 20,),
+                    SizedBox(height: 10),
                     SizedBox(
                       height: 50,
                       width: double.infinity,
-                      child: ElevatedButton(onPressed: (){}, child: Text('Login'),style: ElevatedButton.styleFrom(backgroundColor: Colors.blue,foregroundColor: Colors.white),),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text('Login'),
+                        style: ElevatedButton.styleFrom(backgroundColor: Colors.black, foregroundColor: Colors.white),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text('Forgot Password?'),
                     ),
                     TextButton(onPressed: (){},
-                        child: Text('Forgot Password?')),
+                        child: Text('Don\'t have an account?' , style: TextStyle(color: Colors.black) , ),
+                    ),
+                    TextButton(onPressed: () {}, child: Text('Sign up')),
                   ],
                 ),
               ),
@@ -78,11 +130,10 @@ class LoginScreenHome extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Dont have an account?'),
-              TextButton(onPressed: (){}, child: Text('Sign up')),
+              Text('Don\'t have an account?'),
+              TextButton(onPressed: () {}, child: Text('Sign up')),
             ],
           ),
-
         ],
       ),
     );
