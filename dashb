@@ -1,0 +1,169 @@
+import 'package:atesml_b3/login_screen.dart';
+import 'package:flutter/material.dart';
+
+
+class dashboard extends StatelessWidget {
+  const dashboard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: DashboardHome(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+
+class DashboardHome extends StatelessWidget {
+  const DashboardHome({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            SizedBox(
+              height:MediaQuery.of(context).size.height * 0.30,
+              child: const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                ),
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundColor: Colors.blue,
+                      // Optionally add a background image or other properties
+                    ),
+                    Text(
+                      'Mac Lovell Ates',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Text(
+                      '@dumasmackie@gmail.com',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.person),
+              title: const Text('Profile'),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                // Add navigation to Profile screen if needed
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Settings'),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                // Add navigation to Settings screen if needed
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.notifications),
+              title: const Text('Notifications'),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                // Add navigation to Notifications screen if needed
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.logout),
+              title: const Text('Logout'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=> LoginScreen()));
+                // Handle logout functionality
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.cabin_rounded),
+              title: const Text(''),
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                // Add navigation to another screen if needed
+              },
+            ),
+          ],
+        ),
+      ),
+      appBar: AppBar(
+        toolbarHeight: 80.0, // Optional: change the height if needed
+        backgroundColor: Colors.black, // Set the AppBar background color
+        flexibleSpace: const Center(
+          child: Text(
+            'Lab Exam midterm',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontFamily: 'Arial', // Use white color for better contrast
+            ),
+          ),
+        ),
+      ),
+      backgroundColor: Colors.grey, // Set the body background color
+      body: Center(
+        child: Card(
+          color: Colors.black54, // Card background color
+          child: Padding(
+            padding: const EdgeInsets.all(16.0), // Padding around the content
+            child: Column(
+              mainAxisSize: MainAxisSize.min, // Prevents the card from expanding
+              children: [
+                const CircleAvatar(
+                  radius: 50,
+                  backgroundImage: NetworkImage(
+                    'https://lh4.googleusercontent.com/proxy/KsyghAWAa19GLnnq5WTfHj_PEgqDcfLnQrW9QcQ45LcAx24BKKcb6n9TzXByw354RqLWEteNj7J20t8o24TYuRzw9Ilne6qu1WlORcTqbPjckAJ83SM7KsF1tbzIrNI2KCHwXcui4ZdJAQsTo48r9Eyy',
+                  ),
+                ),
+                const SizedBox(height: 20), // Space between the image and text
+                const Text(
+                  'Ates Mac Lovell Keith D.',
+                  style: TextStyle(color: Colors.white), // Text color for the name
+                ),
+                const Text(
+                  'Bachelor of Science in Information Technology',
+                  style: TextStyle(color: Colors.white), // Text color for the degree
+                ),
+                const SizedBox(height: 20), // Space between the text and buttons
+                Wrap(
+                  spacing: 8.0, // Space between buttons
+                  alignment: WrapAlignment.center, // Center align buttons
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        // Handle add button press
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black, // Button background color
+                        foregroundColor: Colors.white, // Text color for button
+                      ),
+                      child: const Text('Add'), // Text for the first button
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        // Handle follow button press
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black, // Button background color
+                        foregroundColor: Colors.white, // Text color for button
+                      ),
+                      child: const Text('Follow'), // Text for the second button
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
