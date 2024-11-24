@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-b from-white to-blue-50">
+  
+    
+    <header class="sticky top-0 bg-white shadow-md z-10">
+      <div class="flex items-center justify-between max-w-6xl mx-auto px-8 py-4">
+        <div class="text-lg font-bold text-blue-500">Landa</div>
+        <nav class="hidden md:flex space-x-6">
+          <a href="home.html" class="text-gray-600 hover:text-blue-500 transition-colors">Home</a>
+          <a href="about.html" class="text-gray-600 hover:text-blue-500 transition-colors">About</a>
+          <a href="contact.html" class="text-gray-600 hover:text-blue-500 transition-colors">Contact</a>
+          <a href="motorcycle.html" class="text-gray-600 hover:text-blue-500 transition-colors">Motorcycles</a>
+        </nav>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition-transform transform hover:scale-105"><a href="  contact.html">Get started</a>
+        </button>
+      </div>
+    </header>
+  
+    
+    <section class="flex flex-col-reverse md:flex-row items-center max-w-6xl mx-auto px-8 mt-16 space-y-8 md:space-y-0 md:space-x-12">
+     
+      <div class="md:w-1/2 text-center md:text-left">
+        <h1 class="text-5xl font-extrabold text-gray-800 leading-tight">
+          The best way to purchase your Sports Bike.
+        </h1>
+        <p class="mt-4 text-lg text-gray-600">
+          Find the perfect bike that matches your style and speed. Begin your journey with us today!
+        </p>
+        <div class="mt-6 flex justify-center md:justify-start space-x-4">
+          <button class="bg-blue-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-blue-600 transition-transform transform hover:scale-105"><a href="contact.html">Get started</a>
+          </button>
+          <button class="bg-gray-200 text-gray-600 px-6 py-2 rounded-md hover:bg-gray-300 transition-transform transform hover:scale-105"><a href="about.html">Learn more</a>
+          </button>
+        </div>
+      </div>
+  
+      
+      <div class="md:w-1/2">
+        <img
+          src="download (1).jpeg"
+          alt="3D illustration"
+          class="rounded-lg shadow-md mx-auto md:mx-0"
+        />
+      </div>
+    </section>
+  
+  <section class="max-w-6xl mx-auto px-8 py-16 mt-16 bg-white shadow-md rounded-lg">
+    <h2 class="text-4xl font-bold text-center text-gray-800">Our Services</h2>
+    <p class="mt-4 text-center text-gray-600">
+      Discover the wide range of services we offer to meet your needs.
+    </p>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div class="flex flex-col items-center text-center">
+        <div class="bg-blue-100 text-blue-500 p-4 rounded-full shadow-md">
+         
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 8h-3.586l-2-2H8a2 2 0 00-2 2v7h4v-2h6v2h4v-5h2V9a1 1 0 00-1-1zM5 18a2 2 0 11-2 2 2 2 0 012-2zm14 0a2 2 0 11-2 2 2 2 0 012-2z"/>
+          </svg>
+        </div>
+        <h3 class="mt-4 text-xl font-semibold text-gray-800">Fast Delivery</h3>
+        <p class="mt-2 text-gray-600">
+          Get your bike delivered to your doorstep quickly and safely.
+        </p>
+      </div>
+     
+      <div class="flex flex-col items-center text-center">
+        <div class="bg-blue-100 text-blue-500 p-4 rounded-full shadow-md">
+         
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/>
+          </svg>
+        </div>
+        <h3 class="mt-4 text-xl font-semibold text-gray-800">Expert Support</h3>
+        <p class="mt-2 text-gray-600">
+          Our team is here to help you with any questions or concerns.
+        </p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center">
+        <div class="bg-blue-100 text-blue-500 p-4 rounded-full shadow-md">
+         
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 2H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-5 18h-2v-2h2zm2-4h-6v-2h6z"/>
+          </svg>
+        </div>
+        <h3 class="mt-4 text-xl font-semibold text-gray-800">Affordable Pricing</h3>
+        <p class="mt-2 text-gray-600">
+          Enjoy competitive pricing for all our bikes and services.
+        </p>
+      </div>
+    </div>
+  </section>  
+  
+   
+    <footer class="mt-16 py-8 bg-white shadow-inner">
+      <div class="max-w-6xl mx-auto px-8 text-center space-y-4">
+        <p class="text-gray-500 text-sm">
+          © 2024 Your Brand. All Rights Reserved.
+        </p>
+        <div class="flex justify-center space-x-4">
+          <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Facebook</a>
+          <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Twitter</a>
+          <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Instagram</a>
+        </div>
+      </div>
+    </footer>
+  
+  </body>
+  </html> 
