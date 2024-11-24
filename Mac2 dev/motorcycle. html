@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motorcycles - Landa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  
+  <style>
+  body {
+    font-family: 'Poppins', sans serif;
+  }
+  
+    /* Carousel container fixes */
+    .carousel-wrapper {
+      overflow: hidden; /* Prevent image overflow */
+      position: relative;
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out; /* Smooth transition */
+    }
+
+    .carousel-item {
+      flex: 0 0 100%; /* Take full width of the container */
+    }
+
+    /* Carousel navigation buttons */
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 0.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .prev-btn {
+      left: 1rem;
+    }
+
+    .next-btn {
+      right: 1rem;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-white to-blue-50">
+
+  <!-- Header -->
+  <header class="sticky top-0 bg-white shadow-md z-10">
+    <div class="flex items-center justify-between max-w-6xl mx-auto px-8 py-4">
+      <div class="text-lg font-bold text-blue-500">Landa</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="text-gray-600 hover:text-blue-500 transition-colors">Home</a>
+        <a href="about.html" class="text-gray-600 hover:text-blue-500 transition-colors">About</a>
+        <a href="contact.html" class="text-gray-600 hover:text-blue-500 transition-colors">Contact</a>
+        <a href="motorcycle.html" class="text-gray-600 hover:text-blue-500 transition-colors">Motorcycles</a>
+      </nav>
+      <button class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition-transform transform hover:scale-105"><a href="contact.html">Get started</a>
+      </button>
+    </div>
+  </header>
+
+
+  <section class="max-w-6xl mx-auto px-8 mt-12">
+    <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Motorcycles</h1>
+
+    
+    <div class="bg-white shadow-lg rounded-lg mb-12 overflow-hidden">
+      <div class="flex flex-col md:flex-row">
+       
+        <div class="md:w-1/2 carousel-wrapper">
+          <div class="carousel">
+            <img src="download (2).jpeg" alt="Motorcycle Front" class="carousel-item">
+            <img src="download (3).jpeg" alt="Motorcycle Side" class="carousel-item">
+            <img src="images (4).jpeg" alt="Motorcycle Rear" class="carousel-item">
+          </div>
+          <button class="carousel-btn prev-btn" onclick="prevSlide(this)">&larr;</button>
+          <button class="carousel-btn next-btn" onclick="nextSlide(this)">&rarr;</button>
+        </div>
+
+        <!-- Details -->
+        <div class="md:w-1/2 p-6">
+          <h2 class="text-2xl font-bold text-gray-800">Yamaha R15</h2>
+          <p class="text-gray-600 mt-2">Price: <span class="font-semibold text-blue-500">₱180,000</span></p>
+          <p class="mt-4 text-gray-600">
+            The Yamaha R15 is a premium motorcycle designed for performance enthusiasts. Equipped with a high-performance engine and a sporty design, it delivers a thrilling ride experience.
+          </p>
+          <button class="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-blue-600 transition-transform transform hover:scale-105">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <section class="max-w-6xl mx-auto px-8 mt-12">
+    <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center"></h1>
+
+   
+    <div class="bg-white shadow-lg rounded-lg mb-12 overflow-hidden">
+      <div class="flex flex-col md:flex-row">
+      
+        <div class="md:w-1/2 carousel-wrapper">
+          <div class="carousel">
+            <img src="download (2).jpeg" alt="Motorcycle Front" class="carousel-item">
+            <img src="download (3).jpeg" alt="Motorcycle Side" class="carousel-item">
+            <img src="images (4).jpeg" alt="Motorcycle Rear" class="carousel-item">
+          </div>
+          <button class="carousel-btn prev-btn" onclick="prevSlide(this)">&larr;</button>
+          <button class="carousel-btn next-btn" onclick="nextSlide(this)">&rarr;</button>
+        </div>
+
+       
+        <div class="md:w-1/2 p-6">
+          <h2 class="text-2xl font-bold text-gray-800">Yamaha R15</h2>
+          <p class="text-gray-600 mt-2">Price: <span class="font-semibold text-blue-500">₱180,000</span></p>
+          <p class="mt-4 text-gray-600">
+            The Yamaha R15 is a premium motorcycle designed for performance enthusiasts. Equipped with a high-performance engine and a sporty design, it delivers a thrilling ride experience.
+          </p>
+          <button class="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-blue-600 transition-transform transform hover:scale-105">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <section class="max-w-6xl mx-auto px-8 mt-12">
+      <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center"></h1>
+  
+   
+      <div class="bg-white shadow-lg rounded-lg mb-12 overflow-hidden">
+        <div class="flex flex-col md:flex-row">
+         
+          <div class="md:w-1/2 carousel-wrapper">
+            <div class="carousel">
+              <img src="download (2).jpeg" alt="Motorcycle Front" class="carousel-item">
+              <img src="download (3).jpeg" alt="Motorcycle Side" class="carousel-item">
+              <img src="images (4).jpeg" alt="Motorcycle Rear" class="carousel-item">
+            </div>
+            <button class="carousel-btn prev-btn" onclick="prevSlide(this)">&larr;</button>
+            <button class="carousel-btn next-btn" onclick="nextSlide(this)">&rarr;</button>
+          </div>
+  
+         
+          <div class="md:w-1/2 p-6">
+            <h2 class="text-2xl font-bold text-gray-800">Yamaha R15</h2>
+            <p class="text-gray-600 mt-2">Price: <span class="font-semibold text-blue-500">₱180,000</span></p>
+            <p class="mt-4 text-gray-600">
+              The Yamaha R15 is a premium motorcycle designed for performance enthusiasts. Equipped with a high-performance engine and a sporty design, it delivers a thrilling ride experience.
+            </p>
+            <button class="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-blue-600 transition-transform transform hover:scale-105">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+      <section class="max-w-6xl mx-auto px-8 mt-12">
+        <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center"></h1>
+    
+       
+        <div class="bg-white shadow-lg rounded-lg mb-12 overflow-hidden">
+          <div class="flex flex-col md:flex-row">
+            
+            <div class="md:w-1/2 carousel-wrapper">
+              <div class="carousel">
+                <img src="download (2).jpeg" alt="Motorcycle Front" class="carousel-item">
+                <img src="download (3).jpeg" alt="Motorcycle Side" class="carousel-item">
+                <img src="images (4).jpeg" alt="Motorcycle Rear" class="carousel-item">
+              </div>
+              <button class="carousel-btn prev-btn" onclick="prevSlide(this)">&larr;</button>
+              <button class="carousel-btn next-btn" onclick="nextSlide(this)">&rarr;</button>
+            </div>
+    
+            
+            <div class="md:w-1/2 p-6">
+              <h2 class="text-2xl font-bold text-gray-800">Yamaha R15</h2>
+              <p class="text-gray-600 mt-2">Price: <span class="font-semibold text-blue-500">₱180,000</span></p>
+              <p class="mt-4 text-gray-600">
+                The Yamaha R15 is a premium motorcycle designed for performance enthusiasts. Equipped with a high-performance engine and a sporty design, it delivers a thrilling ride experience.
+              </p>
+              <button class="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-blue-600 transition-transform transform hover:scale-105">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+ 
+  <footer class="mt-12 py-6 bg-gray-100 shadow-inner">
+    <div class="max-w-6xl mx-auto px-8 text-center space-y-4">
+      <p class="text-gray-500 text-sm">
+        © 2024 Landa. All Rights Reserved.
+      </p>
+      <div class="flex justify-center space-x-4">
+        <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Facebook</a>
+        <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Twitter</a>
+        <a href="#" class="text-gray-500 hover:text-blue-500 transition-colors">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+ 
+  <script>
+    let currentIndex = 0;
+
+    function showSlide(carousel, index) {
+      const items = carousel.querySelectorAll('.carousel-item');
+      const totalItems = items.length;
+
+      // Ensure index stays within bounds
+      if (index < 0) index = totalItems - 1;
+      if (index >= totalItems) index = 0;
+
+    
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+
+    
+      currentIndex = index;
+    }
+
+    function nextSlide(button) {
+      const carousel = button.closest('.carousel-wrapper').querySelector('.carousel');
+      showSlide(carousel, currentIndex + 1);
+    }
+
+    function prevSlide(button) {
+      const carousel = button.closest('.carousel-wrapper').querySelector('.carousel');
+      showSlide(carousel, currentIndex - 1);
+    }
+  </script>
+</body>
+</html>
