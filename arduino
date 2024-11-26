@@ -1,0 +1,20 @@
+#define relayPin 8
+
+void setup() {
+  pinMode(relayPin, OUTPUT);
+  digitalWrite(relayPin, LOW); // Start with the lock closed
+  Serial.begin(9600); // Bluetooth communication at 9600 baud rate
+}
+
+void loop() {
+  if (Serial.available()) { // Check if data is received
+    String command = Serial.readString(); // Read the received command
+    command.trim(); // Remove whitespace or newline characters
+
+    if (command == "OPEN") {
+      digitalWrite(relayPin, HIGH); // Unlock
+    } else if (command == "CLOSE") {
+      digitalWrite(relayPin, LOW); // Lock
+    }
+  }
+}
