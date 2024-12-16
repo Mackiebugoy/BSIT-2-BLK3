@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Kthan Foster</title>
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Custom styling for navigation buttons */
+    .swiper-navigation-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .swiper-navigation-buttons button {
+      background-color: rgba(255, 255, 255, 0.6);
+      border: none;
+      padding: 10px;
+      margin: 0 8px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .swiper-navigation-buttons button:hover {
+      background-color: rgba(255, 255, 255, 1);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-200 scroll-smooth">
+
+  <header class="fixed top-0 left-0 w-full z-50 bg-gray-900 bg-opacity-80" data-aos="fade-down">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white flex items-center">
+        <!-- Code Icon Logo -->
+        <i class="fas fa-code text-red-500 mr-2 text-3xl"></i> REY
+      </h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#home" class="hover:text-red-500">HOME</a></li>
+          <li><a href="#services" class="hover:text-red-500">SERVICES</a></li>
+          <li><a href="#contact" class="hover:text-red-500">CONTACT</a></li>
+          <li><a href="#about" class="hover:text-red-500">ABOUT ME</a></li>
+          <li><a href="#skills" class="hover:text-red-500">SKILLS</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="bg-red-500 text-white px-5 py-2 rounded hover:bg-red-600">CONTACT</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex items-center container mx-auto px-6 relative" data-aos="fade-up">
+    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('your-image-url.jpg');"></div>
+    
+    <div class="w-full md:w-1/2 z-10">
+      <p class="text-red-500 text-xl mb-2">Hello, I'm</p>
+      <h2 class="text-6xl font-bold mb-4 text-white leading-tight">Rey Gerapusco</h2>
+      <p class="text-2xl mb-8 text-gray-300">Web Designer and Web Developer</p>
+      <p class="text-gray-400 mb-6 max-w-md">I design and develop user-friendly, innovative digital experiences tailored to your needs.</p>
+      
+      <!-- Call to Action Button -->
+      <a href="#contact" class="inline-block bg-red-500 text-white text-lg font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-red-600 transform transition-all duration-300 ease-in-out hover:scale-105 mb-6">
+        Get In Touch
+      </a>
+  
+      <!-- Social Icons -->
+      <div class="flex space-x-6 mb-6">
+        <a href="https://www.facebook.com/figuracion213ra" class="text-gray-400 hover:text-red-500 text-3xl border-2 border-gray-400 p-3 rounded-full transition-all hover:border-red-500 transform transition-all hover:scale-110" data-aos="zoom-in">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://x.com/i/flow/login?lang=en" class="text-gray-400 hover:text-red-500 text-3xl border-2 border-gray-400 p-3 rounded-full transition-all hover:border-red-500 transform transition-all hover:scale-110" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fab fa-x"></i>
+        </a>
+        <a href="https://www.linkedin.com/login" class="text-gray-400 hover:text-red-500 text-3xl border-2 border-gray-400 p-3 rounded-full transition-all hover:border-red-500 transform transition-all hover:scale-110" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/_web.iansites/profilecard/?igsh=MTcwNzlpMGZvaXRuZg==" class="text-gray-400 hover:text-red-500 text-3xl border-2 border-gray-400 p-3 rounded-full transition-all hover:border-red-500 transform transition-all hover:scale-110" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Right Side Image -->
+    <div class="w-full md:w-1/2 z-10">
+      <img src="e7b682ea-b793-49ed-99fe-6e8db1847927.jpg" alt="Rey Gerapusco" class="rounded-lg shadow-lg w-full max-h-[500px] object-cover transform transition-all duration-500 hover:scale-105" data-aos="fade-left">
+    </div>
+  </section>
+
+  <!-- About Section -->
+<section id="about" class="py-16 container mx-auto px-6 relative" data-aos="fade-up">
+  <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('your-background-image-url.jpg');"></div>
+  
+  <h2 class="text-6xl font-bold text-white text-center mb-12 z-10 relative">About Me</h2>
+  
+  <div class="swiper mySwiper z-10 relative" data-aos="fade-up">
+    <div class="swiper-wrapper">
+      <!-- Sport Takraw Image -->
+      <div class="swiper-slide flex items-center relative" data-aos="flip-left">
+        <div class="w-1/3">
+          <img src="e6a16ece-8a74-44bb-9cb3-b07df0dd9eaa.jpg" alt="Sport Takraw" class="w-full h-auto object-cover rounded-lg transform transition-all duration-500 hover:scale-105">
+        </div>
+        <div class="w-2/3 pl-8 text-white">
+          <h3 class="text-3xl font-bold mb-4 flex items-center">
+            <i class="fas fa-futbol text-red-500 mr-2 text-4xl"></i>Sepak Takraw
+          </h3>
+          <p class="mb-4 text-lg">Takraw is a traditional sport from Southeast Asia that I enjoy, where players use their feet, knees, chest, and even their head to hit a rattan ball over a net</p>
+        </div>
+      </div>
+
+      <!-- Fashion Image -->
+      <div class="swiper-slide flex items-center relative" data-aos="flip-left">
+        <div class="w-1/3">
+          <img src="468066950_1264301461381438_8828066386043935437_n.jpg" alt="Fashion" class="w-full h-auto object-cover rounded-lg transform transition-all duration-500 hover:scale-105">
+        </div>
+        <div class="w-2/3 pl-8 text-white">
+          <h3 class="text-3xl font-bold mb-4 flex items-center">
+            <i class="fas fa-tshirt text-red-500 mr-2 text-4xl"></i>Fashion
+          </h3>
+          <p class="mb-4 text-lg">Fashion, to me, is more than just clothing; it's a way to express individuality, style, and culture, and offers a unique form of creativity.</p>
+        </div>
+      </div>
+
+      <!-- Fashion Image -->
+    <div class="swiper-slide flex items-center relative" data-aos="flip-left">
+      <div class="w-1/3">
+        <img src="462110267_1959331981196312_3837714223934200844_n.jpg" alt="Fashion" class="w-full h-auto object-cover rounded-lg transform transition-all duration-500 hover:scale-105">
+      </div>
+      <div class="w-2/3 pl-8 text-white">
+        <h3 class="text-3xl font-bold mb-4 flex items-center">
+          <i class="fas fa-heart text-pink-500 mr-2 text-4xl"></i>My Gf
+        </h3>
+        <p class="mb-4 text-lg">My girlfriend is a beautiful blend of kindness, strength, and creativity. She lights up every room with her smile and has an incredible way of making everything feel special.</p>
+      </div>
+    </div>
+
+
+      <!-- SKSU Image (School) -->
+      <div class="swiper-slide flex items-center relative" data-aos="flip-left">
+        <div class="w-1/3">
+          <img src="sksu.png" alt="SKSU" class="w-full h-auto object-cover rounded-lg transform transition-all duration-500 hover:scale-105">
+        </div>
+        <div class="w-2/3 pl-8 text-white">
+          <h3 class="text-3xl font-bold mb-4 flex items-center">
+            <i class="fas fa-school text-red-500 mr-2 text-4xl"></i>SKSU (My School)
+          </h3>
+          <p class="mb-4 text-lg">Southern Kudarat State University (SKSU) is where I pursued my academic journey, developing my skills in various fields like technology and design.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Skills/Tech Stack Section -->
+<section id="skills" class="h-screen flex flex-col justify-center items-center px-6 relative overflow-hidden" data-aos="fade-up">
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('your-background-image-url.jpg');"></div>
+
+  <!-- Section Content -->
+  <div class="relative z-10 w-full text-center">
+    <!-- Section Title -->
+    <h3 class="text-red-500 uppercase text-sm tracking-widest mb-2">Skills & Tech Stack</h3>
+    <h2 class="text-5xl md:text-6xl font-bold text-white mb-8">My Expertise</h2>
+
+    <!-- Skill Cards Container -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 w-full max-w-7xl mx-auto px-4">
+      <!-- HTML5 Card -->
+      <div class="group bg-gray-800 rounded-xl p-6 shadow-xl transform transition duration-300 hover:scale-110 hover:bg-gray-700 text-center">
+        <i class="fab fa-html5 text-red-500 text-6xl mb-4 group-hover:text-white"></i>
+        <h4 class="text-xl font-semibold text-white mb-2 group-hover:text-red-500">HTML5</h4>
+        <p class="text-gray-400 text-sm mb-4 group-hover:text-gray-300">Modern and semantic markup.</p>
+        <!-- Progress Bar -->
+        <div class="w-full bg-gray-700 rounded-full h-2.5">
+          <div class="bg-red-500 h-2.5 rounded-full" style="width: 90%;"></div>
+        </div>
+        <p class="text-gray-400 text-sm mt-2">90%</p>
+      </div>
+
+      <!-- CSS3 Card -->
+      <div class="group bg-gray-800 rounded-xl p-6 shadow-xl transform transition duration-300 hover:scale-110 hover:bg-gray-700 text-center">
+        <i class="fab fa-css3-alt text-red-500 text-6xl mb-4 group-hover:text-white"></i>
+        <h4 class="text-xl font-semibold text-white mb-2 group-hover:text-red-500">CSS3</h4>
+        <p class="text-gray-400 text-sm mb-4 group-hover:text-gray-300">Responsive design and styling.</p>
+        <!-- Progress Bar -->
+        <div class="w-full bg-gray-700 rounded-full h-2.5">
+          <div class="bg-red-500 h-2.5 rounded-full" style="width: 85%;"></div>
+        </div>
+        <p class="text-gray-400 text-sm mt-2">85%</p>
+      </div>
+
+      <!-- Tailwind CSS Card -->
+      <div class="group bg-gray-800 rounded-xl p-6 shadow-xl transform transition duration-300 hover:scale-110 hover:bg-gray-700 text-center">
+        <i class="fas fa-wind text-red-500 text-6xl mb-4 group-hover:text-white"></i>
+        <h4 class="text-xl font-semibold text-white mb-2 group-hover:text-red-500">Tailwind CSS</h4>
+        <p class="text-gray-400 text-sm mb-4 group-hover:text-gray-300">Utility-first CSS framework.</p>
+        <!-- Progress Bar -->
+        <div class="w-full bg-gray-700 rounded-full h-2.5">
+          <div class="bg-red-500 h-2.5 rounded-full" style="width: 80%;"></div>
+        </div>
+        <p class="text-gray-400 text-sm mt-2">80%</p>
+      </div>
+
+      <!-- JavaScript Card -->
+      <div class="group bg-gray-800 rounded-xl p-6 shadow-xl transform transition duration-300 hover:scale-110 hover:bg-gray-700 text-center">
+        <i class="fab fa-js-square text-red-500 text-6xl mb-4 group-hover:text-white"></i>
+        <h4 class="text-xl font-semibold text-white mb-2 group-hover:text-red-500">JavaScript</h4>
+        <p class="text-gray-400 text-sm mb-4 group-hover:text-gray-300">Interactive and dynamic behavior.</p>
+        <!-- Progress Bar -->
+        <div class="w-full bg-gray-700 rounded-full h-2.5">
+          <div class="bg-red-500 h-2.5 rounded-full" style="width: 75%;"></div>
+        </div>
+        <p class="text-gray-400 text-sm mt-2">75%</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 container mx-auto px-6 relative" data-aos="fade-up">
+    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('your-background-image-url.jpg');"></div>
+  
+    <h3 class="text-red-500 uppercase text-sm mb-2 z-10 relative text-center">My Services</h3>
+    <h2 class="text-5xl font-bold text-white mb-12 z-10 relative text-center">What I Do</h2>
+  
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 z-10 relative">
+      <!-- Service 1 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-700" data-aos="fade-up">
+        <i class="fas fa-desktop text-red-500 text-3xl mb-4"></i>
+        <h4 class="text-2xl font-bold mb-4">Website Design</h4>
+        <p class="text-gray-400">Creative and responsive website design tailored for your business needs.</p>
+      </div>
+  
+      <!-- Service 2 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-700" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-mobile-alt text-red-500 text-3xl mb-4"></i>
+        <h4 class="text-2xl font-bold mb-4">App Development</h4>
+        <p class="text-gray-400">Building mobile applications for seamless user experience.</p>
+      </div>
+  
+      <!-- Service 3 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-700" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-chart-line text-red-500 text-3xl mb-4"></i>
+        <h4 class="text-2xl font-bold mb-4">Business Strategy</h4>
+        <p class="text-gray-400">Developing strategies to help your business grow and succeed.</p>
+      </div>
+  
+      <!-- New Service 4 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-700" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-cogs text-red-500 text-3xl mb-4"></i>
+        <h4 class="text-2xl font-bold mb-4">Automation</h4>
+        <p class="text-gray-400">Streamlining your business processes with automated solutions.</p>
+      </div>
+  
+      <!-- New Service 5 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-700" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-cloud text-red-500 text-3xl mb-4"></i>
+        <h4 class="text-2xl font-bold mb-4">Cloud Solutions</h4>
+        <p class="text-gray-400">Reliable cloud infrastructure for scalable and secure services.</p>
+      </div>
+  
+      <!-- New Service 6 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-700" data-aos="fade-up" data-aos-delay="500">
+        <i class="fas fa-users text-red-500 text-3xl mb-4"></i>
+        <h4 class="text-2xl font-bold mb-4">Team Collaboration</h4>
+        <p class="text-gray-400">Facilitating team collaboration with intuitive project management tools.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="h-screen bg-gray-800 py-16 flex items-center relative" data-aos="fade-up">
+    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('your-background-image-url.jpg');"></div>
+  
+    <div class="container mx-auto px-6 relative z-10">
+      <h2 class="text-5xl font-bold text-white mb-12 text-center">Contact Me</h2>
+      
+      <!-- Contact Form -->
+      <form class="grid gap-6 sm:grid-cols-2" action="#" method="POST">
+        <input type="text" placeholder="Your Name" class="p-4 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-300" data-aos="fade-up">
+        <input type="email" placeholder="Your Email" class="p-4 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-300" data-aos="fade-up" data-aos-delay="100">
+        <textarea rows="5" placeholder="Your Message" class="col-span-2 p-4 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-300" data-aos="fade-up" data-aos-delay="200"></textarea>
+        <button type="submit" class="col-span-2 bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg transition duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">Send Message</button>
+      </form>
+  
+      <!-- Social Media Links -->
+      <div class="flex justify-center space-x-6 mt-8" data-aos="fade-up" data-aos-delay="400">
+        <a href="#" class="text-gray-400 hover:text-red-500 text-3xl">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-red-500 text-3xl">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-red-500 text-3xl">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-red-500 text-3xl">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>
+
+   <!-- Swiper JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+   <script>
+     // Swiper Initialization
+     const swiper = new Swiper('.swiper', {
+       loop: true,
+       navigation: {
+         nextEl: '.swiper-button-next',
+         prevEl: '.swiper-button-prev',
+       },
+     });
+   </script>
+
+</body>
+</html>
