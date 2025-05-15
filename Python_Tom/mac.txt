@@ -1,0 +1,12 @@
+CREATE DATABASE mac_db
+USE mac_db
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('admin', 'staff') NOT NULL
+);
+
+INSERT INTO users (username, password, role) VALUES ('admin', 'admin123', 'admin');
+INSERT INTO users (username, password, role) VALUES ('staff', 'staff123', 'staff');
